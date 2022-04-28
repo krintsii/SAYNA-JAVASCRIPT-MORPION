@@ -230,7 +230,19 @@ function addFour() {
     } else {
         tableau[3].textContent = playerOne;
         ArrayX.push(3);
-        if (tableau[4].textContent == ""){
+        if (tableau[0].textContent == playerOne){
+            tableau[6].textContent = playerTwo;
+            ArrayO.push(6);
+        } else if (tableau[6].textContent == playerOne){
+            tableau[0].textContent = playerTwo;
+            ArrayO.push(0);
+        } else if (tableau[4].textContent == playerOne){
+            tableau[5].textContent = playerTwo;
+            ArrayO.push(5);
+        } else if (tableau[5].textContent == playerOne){
+            tableau[4].textContent = playerTwo;
+            ArrayO.push(4);
+        } else if (tableau[4].textContent == ''){
             tableau[4].textContent = playerTwo;
             ArrayO.push(4);
         }else if (tableau[5].textContent == ''){
@@ -260,7 +272,32 @@ function addFive() {
     } else {
         tableau[4].textContent = playerOne;
         ArrayX.push(4);
-        if (tableau[1].textContent == ""){
+        if (tableau[0].textContent == playerOne){
+            tableau[8].textContent = playerTwo;
+            ArrayO.push(8);
+        }
+        else if (tableau[8].textContent == playerOne){
+            tableau[0].textContent = playerTwo;
+            ArrayO.push(0);
+        } else if (tableau[1].textContent == playerOne){
+            tableau[7].textContent = playerTwo;
+            ArrayO.push(7);
+        } else if (tableau[7].textContent == playerOne){
+            tableau[1].textContent = playerTwo;
+            ArrayO.push(1);
+        } else if (tableau[2].textContent == playerOne){
+            tableau[6].textContent = playerTwo;
+            ArrayO.push(6);
+        } else if (tableau[61].textContent == playerOne){
+            tableau[2].textContent = playerTwo;
+            ArrayO.push(2);
+        } else if (tableau[3].textContent == playerOne){
+            tableau[5].textContent = playerTwo;
+            ArrayO.push(5);
+        } else if (tableau[5].textContent == playerOne){
+            tableau[5].textContent = playerTwo;
+            ArrayO.push(3);
+        } else if (tableau[1].textContent == ""){
             tableau[1].textContent = playerTwo;
             ArrayO.push(1);
         }else if (tableau[3].textContent == ''){
@@ -293,7 +330,7 @@ function addSix() {
     } else {
         tableau[5].textContent = playerOne;
         ArrayX.push(5);
-        if (tableau[2].textContent == ""){
+         if (tableau[2].textContent == ""){
             tableau[2].textContent = playerTwo;
             ArrayO.push(2);
         }else if (tableau[3].textContent == ''){
