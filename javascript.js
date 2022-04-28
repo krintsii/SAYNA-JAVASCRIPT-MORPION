@@ -1,11 +1,12 @@
 
 // Récupération des cases à clicker
 const items = document.getElementsByClassName('grid-item');
+// comme tableau les cases 
 const tableau = Array.from(items);
-console.log(tableau);
-console.log(items);
+// les resultat
 let ArrayX = [];
 let ArrayO = [];
+// les resultas possible 
 const valeur = [
     //row
     [0, 1, 2],
@@ -20,6 +21,7 @@ const valeur = [
     [2, 4, 6]
 ];
 
+// les variables 
 let playerOne, playerTwo
 const choisePlayer = document.getElementById("choisePlayer");
 const playerX = document.getElementById("playerX");
@@ -29,7 +31,7 @@ const endGame = document.getElementById('end-game');
 const layer3 = document.getElementById("layer3");
 const draw = document.getElementById("draw")
 
-
+// fonction des choix 
 function choiseX(){
     choisePlayer.style.display='none';
     playerOne = 'x';
@@ -71,14 +73,7 @@ function Answer () {
     
 }
 
-function iza() {
-    let qui = false
-    if (ArrayX.includes(valeur[i][0]) && ArrayX.includes(valeur[i][1]) && ArrayX.includes(valeur[i][2])){
-        qui = true;
-    }
-    return qui
-}
-
+// les scores de gagnat et de perdre 
 
 let scoreI = 0;
 function caseScore() {
@@ -107,12 +102,12 @@ function caseScoreII() {
     ArrayO = [];
     ArrayX = []
 };
-
+// un petit fonction d'alertes 
 function alerte(){
     alert ('ehhh ...')
 };
 
-
+// fonction de le premier case 
 function addOne() {
    if (tableau[0].textContent !== ''){
        alerte();
@@ -155,6 +150,9 @@ function addOne() {
 
 };
 
+
+// fonction de la dexième case 
+
 function addTwo() {
     if (tableau[1].textContent !== ""){
         alerte();
@@ -189,6 +187,8 @@ function addTwo() {
 
 };
 
+
+// fonction de la troisieme case 
 function addThree() {
     if (tableau[2].textContent !== ''){
         alerte();
@@ -224,6 +224,8 @@ function addThree() {
     Answer()
 };
 
+
+// fonction de la quatrieme case 
 function addFour() {
     if (tableau[3].textContent !== ""){
         alerte();
@@ -265,6 +267,8 @@ function addFour() {
     }
     Answer()
 };
+
+// fonction de la cinquieme case 
 
 function addFive() {
     if(tableau[4].textContent !== ''){
@@ -324,6 +328,8 @@ function addFive() {
     Answer()
 };
 
+
+// fonction de la sixième case 
 function addSix() {
     if (tableau[5].textContent !== ''){
         alerte();
@@ -357,6 +363,8 @@ function addSix() {
     Answer()
 };
 
+
+// fonction de la septième case 
 function addSeven() {
     if (tableau[6].textContent !== ''){
         alerte();
@@ -390,6 +398,8 @@ function addSeven() {
     Answer()
 };
 
+
+// fonction de la huitième case 
 function addHeight() {
     if (tableau[7].textContent !== ""){
         alerte();
@@ -423,6 +433,9 @@ function addHeight() {
     Answer()
 };
 
+
+
+// fonction de la dernière case 
 function addNine() {
     if (tableau[8].textContent !== ''){
         alerte();
@@ -456,6 +469,8 @@ function addNine() {
     Answer()
 };
 
+
+// les évenements de tous les cases 
 tableau[0].addEventListener("click",addOne)
 tableau[1].addEventListener("click",addTwo)
 tableau[2].addEventListener("click",addThree)
